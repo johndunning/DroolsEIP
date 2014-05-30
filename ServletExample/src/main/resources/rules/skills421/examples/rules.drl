@@ -1,0 +1,12 @@
+package rules.skills421.examples
+
+import java.io.PrintWriter;
+ 
+global PrintWriter writer;
+
+rule "always true"
+dialect "mvel"
+when
+then
+   writer.println("Woohoo - Rules are running!");
+end
