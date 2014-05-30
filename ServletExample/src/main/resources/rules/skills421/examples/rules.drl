@@ -1,12 +1,13 @@
 package rules.skills421.examples
 
-import java.io.PrintWriter;
+import com.skills421.model.Response;
  
-global PrintWriter writer;
+global Response RESPONSE;
 
 rule "always true"
 dialect "mvel"
 when
 then
-   writer.println("Woohoo - Rules are running!");
+   RESPONSE.header = "Rules Executed";
+   RESPONSE.data = "Woohoo - Rules are running!";
 end
