@@ -16,6 +16,7 @@ public class RequestServiceImpl implements RequestService
 	public Response sendRequest(Request request)
 	{
 		Response response = ruleService.runRules(request);
+		System.out.format("Response: %s\n",response);
 		return response;
 	}
 }
